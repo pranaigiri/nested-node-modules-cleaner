@@ -55,6 +55,8 @@ You can also find all versions in the [Releases](https://github.com/pranaigiri/n
 3. Click **Delete** to remove all `node_modules` folders.
 4. View progress and logs.
 
+![480](https://github.com/user-attachments/assets/41f26644-804f-46d4-95f7-33f6a822bda8)
+
 ## Support Me
 
 If you find this tool useful, consider supporting my work. ❤️
