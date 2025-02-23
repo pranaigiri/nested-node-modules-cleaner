@@ -1,0 +1,27 @@
+{
+  "name": "deletenodemodulesgui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^12.4.2"
+  },
+  "devDependencies": {
+    "electron": "^34.2.0"
+  },
+  "build": {
+    "appId": "com.thedesignersikkim.nodemodulescleaner",
+    "productName": "NodeModulesCleaner",
+    "win": {
+      "target": "portable",
+      "icon": "icon.ico"
+    }
+  }
+}

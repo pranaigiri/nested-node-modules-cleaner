@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nested Node Modules Cleaner - By Pranai Giri</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="title-bar">
+      <div class="window-controls">
+        <button id="minimize">&#xE921;</button>
+        <!-- Minimize icon -->
+        <button id="close">&#xE8BB;</button>
+        <!-- Close icon -->
+      </div>
+    </div>
+
+    <div class="container">
+      <img class="logo" src="./icon.ico" />
+      <div class="header-info">
+        <h2>Nested Node Modules Cleaner</h2>
+        <div class="software-info">
+          A lightweight tool designed to delete all nested folders named
+          "node_modules" within a selected directory.
+        </div>
+      </div>
+      <button id="deleteBtn">Select Directory</button>
+      <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+      <p id="status"></p>
+      <p id="current-folder"></p>
+    </div>
+
+    <footer>
+      Nested Node Modules Cleaner - By
+      <a href="https://github.com/pranaigiri" target="_blank">Pranai Giri</a>
+    </footer>
+
+    <script>
+      const { ipcRenderer } = require("electron");
+      const { ipcMain } = require("electron");
+
+      document.getElementById("deleteBtn").addEventListener("click", () => {
+        document.getElementById("status").innerText =
+          "Scanning for node_modules...";
+        document.getElementById("current-folder").innerText = "";
+        ipcRenderer.send("delete-node-modules");
+      });
+
+      document.getElementById("minimize").addEventListener("click", () => {
+        ipcRenderer.send("minimize-window");
+      });
+
+      document.getElementById("close").addEventListener("click", () => {
+        ipcRenderer.send("close-window");
+      });
+
+      ipcRenderer.on("delete-start", (event, total) => {
+        document.getElementById(
+          "status"
+        ).innerText = `Found ${total} node_modules folders. Deleting...`;
+        document.getElementById("progress-container").style.display = "block";
+      });
+
+      ipcRenderer.on("delete-progress", (event, progress, folderPath) => {
+        document.getElementById("progress-bar").style.width = `${progress}%`;
+        document.getElementById(
+          "current-folder"
+        ).innerText = `Deleting: ${folderPath}`;
+      });
+
+      ipcRenderer.on("delete-result", (event, message) => {
+        document.getElementById("status").innerText = message;
+        document.getElementById("progress-bar").style.width = "100%";
+        document.getElementById("current-folder").innerText = "";
+      });
+    </script>
+  </body>
+</html>
