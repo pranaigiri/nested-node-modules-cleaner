@@ -1,6 +1,8 @@
 # Nested Node Modules Cleaner
-
 **Nested Node Modules Cleaner** is a tool that removes all nested `node_modules` folders within a directory efficiently. Built using **Electron**, it provides a **GUI interface** to track progress and deletion information.
+
+![1](https://github.com/user-attachments/assets/4e5634e7-2a89-44be-8957-692d07135bfc)
+
 
 ## Features
 
