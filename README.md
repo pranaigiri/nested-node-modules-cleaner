@@ -41,7 +41,7 @@
 ## Download
 
 <p align="left">
-  <a href="https://github.com/your-username/nested-node-modules-cleaner/releases/latest/download/NestedNodeModulesCleaner.exe">
+  <a href="https://github.com/pranaigiri/nested-node-modules-cleaner/releases/download/nested-node-modules-cleaner/NestedNodeModulesCleanerPortable.exe">
     <img src="https://img.shields.io/badge/Download-EXE-blue?style=for-the-badge&logo=windows" alt="Download EXE">
   </a>
 </p>

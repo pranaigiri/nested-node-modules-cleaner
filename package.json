@@ -1,27 +1,44 @@
 {
-  "name": "deletenodemodulesgui",
+  "name": "nestednodemodulescleaner",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple GUI tool to delete nested node_modules folders.",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "package": "electron-packager . NestedNodeModulesCleaner --platform=win32 --arch=x64 --out=dist --icon=icon.ico --overwrite",
+    "build": "electron-builder",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "electron",
+    "node_modules",
+    "cleaner",
+    "GUI"
+  ],
+  "author": "Pranai Giri",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pranaigiri/nested-node-modules-cleaner.git"
+  },
   "dependencies": {
     "inquirer": "^12.4.2"
   },
   "devDependencies": {
-    "electron": "^34.2.0"
+    "electron": "^34.2.0",
+    "electron-packager": "^17.1.1",
+    "electron-builder": "^24.6.0"
   },
   "build": {
-    "appId": "com.thedesignersikkim.nodemodulescleaner",
-    "productName": "NodeModulesCleaner",
+    "appId": "com.thedesignersikkim.nestednodemodulescleaner",
+    "productName": "NestedNodeModulesCleaner",
     "win": {
       "target": "portable",
       "icon": "icon.ico"
-    }
+    },
+    "directories": {
+      "output": "dist"
+    },
+    "compression": "maximum"
   }
 }
