@@ -1,7 +1,16 @@
-# Nested Node Modules Cleaner
-**Nested Node Modules Cleaner** is a tool that removes all nested `node_modules` folders within a directory efficiently. Built using **Electron**, it provides a **GUI interface** to track progress and deletion information.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a42eaca6-c2da-442e-804c-a42b323ad7fe" alt="Logo" width="150"/>
+</p>
+<h1 align="center">Nested Node Modules Cleaner</h1>
 
-![1](https://github.com/user-attachments/assets/4e5634e7-2a89-44be-8957-692d07135bfc)
+<p align="center">
+  <strong>Nested Node Modules Cleaner</strong> is a tool that removes all nested <code>node_modules</code> folders within a directory efficiently. Built using <strong>Electron</strong>, it provides a <strong>GUI interface</strong> to track progress and deletion information.
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/458c3e66-cacf-4321-97a1-429089a25522" alt="VS 480"/>
+</p>
+
 
 ## Features
 
@@ -76,9 +85,6 @@ You can also find all versions in the [Releases](https://github.com/pranaigiri/n
 2. Select the root directory.
 3. Click **Delete** to remove all `node_modules` folders.
 4. View progress and logs.
-
-![480](https://github.com/user-attachments/assets/41f26644-804f-46d4-95f7-33f6a822bda8)
-
 
 ### Conclusion
 Since deleting `node_modules` manually is slow, **Nested Node Modules Cleaner** automates the process using efficient command-line methods, providing a **GUI interface** for convenience!
