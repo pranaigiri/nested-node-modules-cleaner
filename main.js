@@ -8,7 +8,7 @@ let mainWindow;
 app.whenReady().then(() => {
     mainWindow = new BrowserWindow({
         width: 600,
-        height: 400,
+        height: 500,
         frame: false,
         resizable: false,
         icon: path.join(__dirname, 'icon.ico'),
