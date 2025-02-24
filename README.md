@@ -69,15 +69,30 @@ When deleting the `node_modules` folder using the **Windows File Explorer Delete
    npm start
    ```
 
-## Download
+## **Download**  
 
 <p align="left">
   <a href="https://github.com/pranaigiri/nested-node-modules-cleaner/releases/download/nested-node-modules-cleaner/NestedNodeModulesCleanerPortable.exe">
     <img src="https://img.shields.io/badge/Download-EXE-blue?style=for-the-badge&logo=windows" alt="Download EXE">
   </a>
-</p>
+</p>  
 
-You can also find all versions in the [Releases](https://github.com/pranaigiri/nested-node-modules-cleaner/releases) section.
+You can also find all versions in the [Releases](https://github.com/pranaigiri/nested-node-modules-cleaner/releases) section.  
+
+---
+
+## **Windows Installation Short Guide**  
+
+1. **Download the EXE** from the link above.  
+2. **Run the EXE** (double-click to open).  
+3. **Windows SmartScreen Warning?**  
+   - Click **More info** → **Run anyway** (since the app is unsigned, this warning may appear).  
+4. **Select a directory** and **clean nested `node_modules`** effortlessly!  
+
+> 🚀 **No installation required** – it's a portable app! Just download and run.
+
+
+
 
 ## Usage
 
