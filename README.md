@@ -3,13 +3,33 @@
 
 ![1](https://github.com/user-attachments/assets/4e5634e7-2a89-44be-8957-692d07135bfc)
 
-
 ## Features
 
 - Scans and detects all nested `node_modules` folders within a selected directory.
 - Deletes detected folders using **PowerShell** and **Command Prompt (CMD)** as a fallback.
 - Provides a **progress indicator** and logs deletion information.
 - Simple and minimal **GUI interface**.
+
+## Why Use This Tool?
+### Deleting `node_modules` Manually is Slow
+When deleting the `node_modules` folder using the **Windows File Explorer Delete button**, it takes much longer compared to using **PowerShell or CMD**. Here’s why:
+
+1. **Windows Explorer Checks Every File:**
+   - It scans and calculates file sizes and types before deletion.
+   - Moves files to the **Recycle Bin**, adding extra processing time.
+
+2. **Too Many Small Files:**
+   - `node_modules` contains thousands (or even millions) of files.
+   - Windows struggles with deleting many small files quickly.
+
+3. **File System Overhead:**
+   - Windows Explorer deletes files one at a time, refreshing the UI, causing extra delay.
+
+### Why CMD or PowerShell is Faster
+1. **Bypasses Recycle Bin** → Directly removes files, skipping extra steps.
+2. **Efficient Bulk Deletion** → Deletes entire directories at once.
+3. **No UI Overhead** → No progress bars or file scanning.
+
 
 ## How It Works
 
@@ -58,6 +78,11 @@ You can also find all versions in the [Releases](https://github.com/pranaigiri/n
 4. View progress and logs.
 
 ![480](https://github.com/user-attachments/assets/41f26644-804f-46d4-95f7-33f6a822bda8)
+
+
+### Conclusion
+Since deleting `node_modules` manually is slow, **Nested Node Modules Cleaner** automates the process using efficient command-line methods, providing a **GUI interface** for convenience!
+
 
 ## Support Me
 
